@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  @apply min-h-dvh;
+}
+
+body {
+  @apply bg-cyan-100 font-sans font-normal text-cyan-500;
+}
+
+.bg-main {
+  background:
+    url('/bg-header-mobile.svg') no-repeat center top / auto 10rem,
+    linear-gradient(
+      to bottom,
+      theme('colors.cyan.400') 10rem,
+      theme('colors.cyan.100') 10rem
+    );
+}
+
+@media (min-width: 475px) {
+  .bg-main {
+    background:
+      url('/bg-header-desktop.svg') no-repeat center top / auto 10rem,
+      linear-gradient(
+        to bottom,
+        theme('colors.cyan.400') 10rem,
+        theme('colors.cyan.100') 10rem
+      );
+  }
+}
